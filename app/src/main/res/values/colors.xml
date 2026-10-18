@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="charcoal">#17191C</color>
+    <color name="slate">#303840</color>
+    <color name="lime">#B7F34A</color>
+    <color name="off_white">#F5F6F2</color>
+    <color name="muted_gray">#9AA5AE</color>
+    <color name="border">#424A52</color>
+
+    <!-- Alias untuk resource lama -->
+    <color name="black">#17191C</color>
+    <color name="white">#F5F6F2</color>
+    <color name="free">#17191C</color>
+    <color name="red">#B7F34A</color>
+    <color name="gray">#9AA5AE</color>
+</resources>
