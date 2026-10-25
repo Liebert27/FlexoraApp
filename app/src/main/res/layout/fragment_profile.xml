@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bebasneue"
+            android:text="Profil"
+            android:textColor="@color/off_white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:id="@+id/txtUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Halo, User"
+            android:textColor="@color/lime"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- DAFTAR MENU (simple list item) -->
+    <ListView
+        android:id="@+id/listViewItems"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/border"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>

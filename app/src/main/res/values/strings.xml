@@ -9,4 +9,6 @@
     <string name="gerakan_isi">• Push Up – melatih dada, bahu, dan lengan\n• Squat – melatih paha dan bokong\n• Plank – melatih otot inti (perut dan punggung)\n• Sit Up – melatih otot perut\n• Jumping Jack – pemanasan dan kardio ringan</string>
     <string name="rencana_title">Rencana Pengembangan</string>
     <string name="rencana_isi">Ke depannya aplikasi ini akan dilengkapi fitur penghitung gerakan otomatis (misalnya push up) menggunakan kamera.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

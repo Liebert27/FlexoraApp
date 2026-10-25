@@ -1,15 +1,17 @@
-
 package com.example.pedro3tia
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.bumptech.glide.Glide
+import androidx.fragment.app.Fragment
+import com.example.pedro3tia.Home.HomeFragment
+import com.example.pedro3tia.Profile.ProfileFragment
+import com.example.pedro3tia.Program.ProgramFragment
+import com.example.pedro3tia.Progress.ProgressFragment
 import com.example.pedro3tia.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,12 +20,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val bars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(bars.left, bars.top, bars.right, bars.bottom)
+            v.setPadding(bars.left, bars.top, bars.right, 0) // bottom = 0
             insets
         }
 
@@ -46,28 +49,36 @@ class MainActivity : AppCompatActivity() {
                 .show()
         }
 
-        //  ikon dari URL internet
-        fun loadIcon(view: ImageView, url: String) {
-            Glide.with(this).load(url).into(view)
+        // Fragment pertama yang tampil
+        replaceFragment(HomeFragment())
+
+        // Bottom Navigation
+        binding.bottomNavView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.home -> {
+                    replaceFragment(HomeFragment())
+                    true
+                }
+                R.id.program -> {
+                    replaceFragment(ProgramFragment())
+                    true
+                }
+                R.id.progress -> {
+                    replaceFragment(ProgressFragment())
+                    true
+                }
+                R.id.profile -> {
+                    replaceFragment(ProfileFragment())
+                    true
+                }
+                else -> false // false jika item tidak dikenal
+            }
         }
+    }
 
-        loadIcon(binding.imgSearch,
-            "https://img.icons8.com/ios/100/9AA5AE/search--v1.png")
-        loadIcon(binding.imgFocusStrength,
-            "https://img.icons8.com/ios/100/B7F34A/dumbbell.png")
-        loadIcon(binding.imgFocusFlex,
-            "https://img.icons8.com/ios/100/B7F34A/stretching.png")
-        loadIcon(binding.imgFocusCore,
-            "https://img.icons8.com/ios/100/B7F34A/balance.png")
-
-        loadIcon(binding.imgNavHome,
-            "https://img.icons8.com/ios-filled/100/B7F34A/home.png")
-        loadIcon(binding.imgNavProgram,
-            "https://img.icons8.com/ios/100/9AA5AE/dumbbell.png")
-        loadIcon(binding.imgNavProgress,
-            "https://img.icons8.com/ios/100/9AA5AE/combo-chart.png")
-        loadIcon(binding.imgNavProfile,
-            "https://img.icons8.com/ios/100/9AA5AE/user.png")
-
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(binding.fragmentContainer.id, fragment)
+            .commit()
     }
 }

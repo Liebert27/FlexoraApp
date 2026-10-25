@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <!-- JUDUL HALAMAN -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bebasneue"
+            android:text="Program Latihan"
+            android:textColor="@color/off_white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih program yang cocok untukmu, tanpa alat khusus."
+            android:textColor="@color/muted_gray"
+            android:textSize="12sp" />
+
+        <!-- SEARCH -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="@color/slate"
+            app:cardCornerRadius="14dp"
+            app:strokeColor="@color/border"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="14dp">
+
+                <ImageView
+                    android:id="@+id/imgSearch"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:contentDescription="Cari"
+                    app:tint="@color/muted_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Cari program latihan..."
+                    android:textColor="@color/muted_gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- PROGRAM UNTUKMU -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Program Untukmu"
+            android:textColor="@color/off_white"
+            android:textSize="17sp" />
+
+        <!-- CARD: CALISTHENICS -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardCalisthenics"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/slate"
+            app:cardCornerRadius="20dp"
+            app:strokeColor="@color/border"
+            app:strokeWidth="1dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgPlanCalisthenics"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Program Calisthenics"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/calisthenic" />
+
+                <!-- lapisan gelap supaya teks mudah dibaca -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000" />
+
+                <!-- label kategori -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="14dp"
+                    app:cardBackgroundColor="@color/lime"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:text="Calisthenics"
+                        android:textColor="@color/slate"
+                        android:textSize="10sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- judul dan keterangan -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="Bodyweight Foundations"
+                        android:textColor="@color/off_white"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4 Minggu • Pemula"
+                        android:textColor="@color/off_white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- CARD: PILATES -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPilates"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/slate"
+            app:cardCornerRadius="20dp"
+            app:strokeColor="@color/border"
+            app:strokeWidth="1dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgPlanPilates"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="Program Pilates"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pilates" />
+
+                <!-- lapisan gelap supaya teks mudah dibaca -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#66000000" />
+
+                <!-- label kategori -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="14dp"
+                    app:cardBackgroundColor="@color/off_white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="4dp"
+                        android:text="Pilates"
+                        android:textColor="@color/slate"
+                        android:textSize="10sp" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- judul dan keterangan -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="Flexibility &amp; Mobility"
+                        android:textColor="@color/off_white"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4 Minggu • Pemula"
+                        android:textColor="@color/off_white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- FOKUS AREA TUBUH -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Fokus Area Tubuh"
+            android:textColor="@color/off_white"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDada"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/slate"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="@color/border"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <!-- nomor sebagai hiasan -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="01"
+                        android:textColor="@color/border"
+                        android:textSize="34sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="Dada"
+                        android:textColor="@color/off_white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Push-up"
+                        android:textColor="@color/lime"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardBahu"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/slate"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="@color/border"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <!-- nomor sebagai hiasan -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="02"
+                        android:textColor="@color/border"
+                        android:textSize="34sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="Bahu"
+                        android:textColor="@color/off_white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Pike Push-up"
+                        android:textColor="@color/lime"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardLengan"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/slate"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="@color/border"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <!-- nomor sebagai hiasan -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="03"
+                        android:textColor="@color/border"
+                        android:textSize="34sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="Lengan"
+                        android:textColor="@color/off_white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tricep Dips"
+                        android:textColor="@color/lime"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardPunggung"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/slate"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="@color/border"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <!-- nomor sebagai hiasan -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="04"
+                        android:textColor="@color/border"
+                        android:textSize="34sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="Punggung"
+                        android:textColor="@color/off_white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Superman"
+                        android:textColor="@color/lime"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCore"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/slate"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="@color/border"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <!-- nomor sebagai hiasan -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="05"
+                        android:textColor="@color/border"
+                        android:textSize="34sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="Core"
+                        android:textColor="@color/off_white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Plank"
+                        android:textColor="@color/lime"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardKaki"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                app:cardBackgroundColor="@color/slate"
+                app:cardCornerRadius="16dp"
+                app:strokeColor="@color/border"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="14dp">
+
+                    <!-- nomor sebagai hiasan -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="06"
+                        android:textColor="@color/border"
+                        android:textSize="34sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bebasneue"
+                        android:text="Kaki"
+                        android:textColor="@color/off_white"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Squat"
+                        android:textColor="@color/lime"
+                        android:textSize="11sp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- jarak bawah -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="18dp" />
+
+    </LinearLayout>
+</ScrollView>

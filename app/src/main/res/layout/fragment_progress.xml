@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bebasneue"
+            android:text="Riwayat Latihan"
+            android:textColor="@color/off_white"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Catatan latihanmu selama seminggu terakhir."
+            android:textColor="@color/muted_gray"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- DAFTAR RIWAYAT (custom adapter) -->
+    <ListView
+        android:id="@+id/listProgressItems"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent" />
+
+</LinearLayout>
